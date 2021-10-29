@@ -10,14 +10,10 @@ const oidcConfig = {
     console.log(user);
     window.location.hash = '';
   },
-  authority: 'https://accounts.google.com',
-  clientId:
-    '1066073673387-undfdseanu1soilcdprq1p4m8gq8a1iu.apps.googleusercontent.com',
+  authority: "http://keycloak:8082/auth/realms/zuul-demo",
+  clientId: 'zuul',
   responseType: 'id_token',
-  redirectUri:
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3000/'
-      : 'https://cobraz.github.io/example-oidc-react',
+  redirectUri: 'http://localhost:3000/',
 };
 
 function App() {
